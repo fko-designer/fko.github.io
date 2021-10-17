@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/*common*/
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: blanchedalmond;
+}
+img {
+  vertical-align: bottom;
+}
+
+
+/*-----------------------------------------------------------------header--------------------*/
+header {
+  background-color: #efefef;
+  width: 100%;
+  position: fixed;
+}
+.container {
+  /* max-width:1200px; */
+  /* margin: 0 auto; */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container div+div {
+  margin-left: 80px;
+}
+header h1 {
+  font-weight: normal;
+  font-size: 24px;
+}
+header p {
+  font-size: 14px;
+}
+header ul {
+list-style: none;
+margin: 16px 0 0 0;
+padding: 0;
+display: flex;
+}
+header ul li+li {
+margin-left: 10px;
+}
+header .icon {
+border-radius: 50%;
+transition-property:border-radius;
+transition-duration: 1s;
+}
+header .icon:hover {
+border-radius: 0%;
+}
+.my_intro {
+  width: 300px;
+}
+
+
+
+/*----------------------------------------------------------main-----------------------------*/
+main  {
+max-width: 1200px;
+margin: 0 auto;
+padding-top: 200px;
+}
+
+
+section {
+  text-align: center;
+  margin-bottom: 50px;
+  /* width: 1200px; */
+}
+
+.container-2 h1 {
+  font-size: 24px;
+  font-weight: normal;
+  padding: 60px 0;
+  width: 100%;
+  text-align: center;
+  
+}
+
+main h2 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: 16px;
+  text-align: center;
+}
+.description {
+  line-height: 1.9;
+  margin: 16px auto 0;
+  width: 400px;
+  text-align: left;
+}
+main section+section {
+  margin-top: 60px;
+}
+
+@keyframes asbm{
+  0%{transform:perspective(250px) rotateY(-10deg) rotateX(15deg);}
+  100%{transform:perspective(250px) rotateY(10deg) rotateX(-15deg);}
+  }
+  @keyframes wlk{
+  0%{left:0px;transform:rotateY(0deg);}
+  50%{left:calc(100% - 150px);transform:rotateY(0deg);}
+  51%{left:calc(100% - 150px);transform:rotateY(180deg);}
+  100%{left:0px;transform:rotateY(180deg);}
+  }
+  .waku0{
+  display:inline-block;
+  position: relative;
+  width: 150px;
+  height: 200px;
+  animation: wlk 20s linear 0s infinite normal;
+  }
+  .waku1{
+  display:inline-block;
+  position:absolute;
+  transform-origin: 0% 50% 0px;
+  animation:asbm 0.8s linear 0s infinite alternate;
+  }
+  .waku1 img {
+    width: 100px;
+  }
+
+/*footer*/
+footer {
+  padding: 60px 0;
+  text-align: center;
+  color:#aaa;
+  background-color: #efefef;
+}
+
+@media(max-width:599px){
+  header {
+    position: static;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container div+div {
+    margin-left: 0;
+  }
+  section img {
+    width: 100%;
+  }
+  .my_intro {
+    margin-top: 10px;
+  }
+  .description {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+
+}
